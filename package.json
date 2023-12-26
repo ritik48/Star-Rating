@@ -1,6 +1,6 @@
 {
   "name": "star-ratings-react",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "A Star Rating component made in react. Easy to customise and integrate to react applications.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
