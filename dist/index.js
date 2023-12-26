@@ -19,7 +19,8 @@ const StarRating = ({
   rating,
   onSetRating,
   size = 30,
-  color = "#ffd814"
+  starColor = "#ffd814",
+  textColor = "black"
 }) => {
   const [hoverRating, setHoverRating] = React.useState(0);
   let startContainerStyle = {
@@ -28,7 +29,7 @@ const StarRating = ({
     alignItems: "center"
   };
   const textStyle = {
-    color: "white",
+    color: textColor,
     fontSize: `${size / 1.2}px`,
     lineHeight: "1",
     margin: "0"
@@ -48,7 +49,7 @@ const StarRating = ({
     id: i,
     key: i,
     width: size,
-    color: color
+    starColor: starColor
   }))), /*#__PURE__*/React__default["default"].createElement("p", {
     style: textStyle
   }, hoverRating || rating || ""));
@@ -59,7 +60,7 @@ function Star({
   id,
   onSetHoverRating,
   width,
-  color
+  starColor
 }) {
   const starStyle = {
     disply: "block",
@@ -75,8 +76,8 @@ function Star({
   }, full ? /*#__PURE__*/React__default["default"].createElement("svg", {
     version: "1.1",
     viewBox: "0 0 43.128 43.128",
-    fill: `${color}`,
-    stroke: `${color}`
+    fill: `${starColor}`,
+    stroke: `${starColor}`
   }, /*#__PURE__*/React__default["default"].createElement("g", {
     id: "SVGRepo_bgCarrier"
   }), /*#__PURE__*/React__default["default"].createElement("g", {
@@ -88,8 +89,8 @@ function Star({
   }), " "), " ")) : /*#__PURE__*/React__default["default"].createElement("svg", {
     version: "1.1",
     viewBox: "0 0 43.128 43.128",
-    fill: "",
-    stroke: `${color}`,
+    fill: "transparent",
+    stroke: `${starColor}`,
     strokeWidth: "3"
   }, /*#__PURE__*/React__default["default"].createElement("g", {
     id: "SVGRepo_bgCarrier"
